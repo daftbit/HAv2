@@ -1,0 +1,76 @@
+# Front light automations
+- alias: 'Turn the front exterior lights on'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "+00:30:00"
+  action:
+    service: switch.turn_on
+    entity_id: switch.ge_14291_inwall_smart_switch_switch
+  
+- alias: 'Turn the front exterior lights off'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-00:30:00"
+  action:
+    service: switch.turn_off
+    entity_id: switch.ge_14291_inwall_smart_switch_switch
+    
+# Front hallway light automation
+- alias: 'Turn the front hallway light on'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-01:00:00"
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: switch.turn_on
+    entity_id: switch.ge_14291_inwall_smart_switch_switch_2
+- alias: 'Turn the front hallway light off'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "+01:00:00"
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: switch.turn_off
+    entity_id: switch.ge_14291_inwall_smart_switch_switch_2
+    
+# Front end themes automation
+- alias: 'Set HA theme for day and night'
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: sun.sun
+      to: above_horizon
+    - platform: state
+      entity_id: sun.sun
+      to: below_horizon
+  action:
+    - service_template: frontend.set_theme
+      data_template:
+        name: >
+          {% if states.sun.sun.state == "above_horizon" %}
+            Light - Blue
+          {% else %}
+            Dark - Blue
+          {% endif %}
+          
+          
+    

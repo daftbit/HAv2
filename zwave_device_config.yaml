@@ -1,0 +1,20 @@
+# Living Room Fan Light
+light.ge_14294_inwall_smart_dimmer_level:
+  polling_intensity: 1
+  refresh_value: true
+  delay: 3
+# Bedroom Fan Light
+light.ge_14294_inwall_smart_dimmer_level_2:
+  polling_intensity: 1
+  refresh_value: true
+  delay: 3
+# Dining Room Light
+light.ge_14294_inwall_smart_dimmer_level_3:
+  polling_intensity: 1
+  refresh_value: true
+  delay: 3
+# Kitchen Light
+light.ge_14294_inwall_smart_dimmer_level_4:
+  polling_intensity: 1
+  refresh_value: true
+  delay: 3

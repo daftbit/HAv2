@@ -1,0 +1,17 @@
+.cloud
+.git
+.storage
+.uuid
+android/**
+deps/**
+home-assistant.log
+home-assistant_v2.db*
+options.xml
+OZW_Log.txt
+pyozw.sqlite
+secrets.yaml
+tts/**
+zwscene.xml
+cert/**
+zwcfg_0xf52f7382.xml
+plex.conf

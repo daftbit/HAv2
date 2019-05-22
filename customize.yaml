@@ -1,0 +1,26 @@
+# Living Room
+light.ge_14294_inwall_smart_dimmer_level:
+  friendly_name: Living Room Fan Light
+fan.ge_14287_fan_control_switch_level:
+  friendly_name: Living Room Fan Speed Control
+# Bedroom
+light.ge_14294_inwall_smart_dimmer_level_2:
+  friendly_name: Bedroom Fan Light
+fan.ge_14287_fan_control_switch_level_2:
+  friendly_name: Bedroom Fan Speed Control
+media_player.bedroom_tv:
+  friendly_name: Bedroom Chromecast
+# Hallway & Exterior Lights
+switch.ge_14291_inwall_smart_switch_switch:
+  friendly_name: Front Exterior Lights
+  icon: mdi:lightbulb
+switch.ge_14291_inwall_smart_switch_switch_2:
+  friendly_name: Front Hallway Light
+  icon: mdi:lightbulb
+# Dining Room Lights
+light.ge_14294_inwall_smart_dimmer_level_3:
+  friendly_name: Dining Room Lights
+# Kitchen Lights
+light.ge_14294_inwall_smart_dimmer_level_4:
+  friendly_name: Kitchen Lights
+ 
