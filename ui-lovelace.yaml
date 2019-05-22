@@ -7,7 +7,7 @@ resources:
   - url: /local/custom_ui/compact-custom-header.js
     type: module
     
-title: Hull Home
+title: Home
 badges: none
 views:
   - icon: mdi:earth
