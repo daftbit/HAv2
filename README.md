@@ -22,4 +22,4 @@ Here are some recent screenshots (please note that the time of your viewing that
 Front end themes and configuration may change periodically as I experiment.
 
 ### Home Screen DayMode
-![Alt Text](https://github.com/daftbit/HomeAssistant-Configuration/blob/master/screenshots/Home_Screen_DayMode.gif)
+![Alt Text](screenshots/home_day_mode.gif)
