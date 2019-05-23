@@ -21,5 +21,20 @@ Here are some recent screenshots (please note that the time of your viewing that
 
 Front end themes and configuration may change periodically as I experiment.
 
-### Home Screen DayMode
+### Home View
+#### Daylight Theme
 ![Alt Text](screenshots/home_day_mode.gif)
+
+#### Night Theme
+
+### Weather View
+#### Daylight Theme
+![Alt Text](screenshots/weather_day_mode.gif)
+
+#### Night Theme
+
+### Rooms View
+#### Daylight Theme
+![Alt Text](screenshots/rooms_day_mode.gif)
+
+#### Night Theme
