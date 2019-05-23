@@ -23,12 +23,3 @@ Front end themes and configuration may change periodically as I experiment.
 
 ### Home Screen DayMode
 ![Alt Text](https://github.com/daftbit/HomeAssistant-Configuration/blob/master/screenshots/Home_Screen_DayMode.gif)
-
-### Home Screen NightMode
-![Alt Text](https://github.com/daftbit/HomeAssistant-Configuration/blob/master/screenshots/Home_Screen_NightMode.gif)
-
-### Room Screen DayMode
-![Alt Text](https://github.com/daftbit/HomeAssistant-Configuration/blob/master/screenshots/Room_Screen_DayMode.png)
-
-### Room Screen NightMode
-![Alt Text](https://github.com/daftbit/HomeAssistant-Configuration/blob/master/screenshots/Room_Screen_NightMode.png)  
