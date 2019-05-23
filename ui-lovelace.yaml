@@ -7,9 +7,33 @@ resources:
   - url: /local/custom_ui/compact-custom-header.js
     type: module
     
-title: Home
+title: Hull Home
 badges: none
 views:
+  - icon: mdi:home-outline
+    id: Home
+    title: Home
+    cards:
+      - type: custom:compact-custom-header
+        notifications: hide
+        options: clock
+        clock_am_pm: true
+        clock_format: 12
+      - type: entities
+        title: Automations
+        show_header_toggle: false
+        entities:
+          - automation.turn_the_front_exterior_lights_on
+          - automation.turn_the_front_exterior_lights_off
+          - automation.turn_the_front_hallway_light_on
+          - automation.turn_the_front_hallway_light_off
+      - type: entities
+        title: Environment
+        show_header_toggle: false
+        entities:
+          - sensor.time
+          - sensor.date
+          - sun.sun
   - icon: mdi:earth
     id: Environment
     title: Environment
@@ -18,7 +42,6 @@ views:
         notifications: hide
         options: clock
         clock_am_pm: true
-        clock_date: false
         clock_format: 12
       - type: custom:dark-sky-weather-card
         entity_current_conditions: sensor.dark_sky_icon
@@ -74,26 +97,15 @@ views:
         entity: camera.radar_tx_aus
       - type: iframe
         url: !secret windy_url
-      - type: entities
-        title: Environment
-        show_header_toggle: false
-        entities:
-          - sensor.time
-          - sensor.date
-          - sun.sun
-      - type: entities
-        title: Automations
-        show_header_toggle: false
-        entities:
-          - automation.turn_the_front_exterior_lights_on
-          - automation.turn_the_front_exterior_lights_off
-          - automation.turn_the_front_hallway_light_on
-          - automation.turn_the_front_hallway_light_off
-  - icon: mdi:home-assistant
+  - icon: mdi:door
     id: Home
     title: Home
     cards:
       - type: custom:compact-custom-header
+        notifications: hide
+        options: clock
+        clock_am_pm: true
+        clock_format: 12
       - type: entities
         title: Living Room
         show_header_toggle: false
