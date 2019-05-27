@@ -26,15 +26,18 @@ Front end themes and configuration may change periodically as I experiment.
 ![Alt Text](screenshots/home_day_mode.gif)
 
 #### Night Theme
+![Alt Text](screenshots/home_night_mode.gif)
 
 ### Weather View
 #### Daylight Theme
 ![Alt Text](screenshots/weather_day_mode.gif)
 
 #### Night Theme
+![Alt Text](screenshots/weather_night_mode.gif)
 
 ### Rooms View
 #### Daylight Theme
 ![Alt Text](screenshots/rooms_day_mode.gif)
 
 #### Night Theme
+![Alt Text](screenshots/rooms_night_mode.gif)
