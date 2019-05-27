@@ -23,8 +23,12 @@ system_health:
 config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+http:
+  base_url: !secret hass_base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -54,55 +58,7 @@ map:
 sun:
 
 # Sensors
-sensor:
-  # Weather prediction
-  - platform: yr
-    name: Weather
-    forecast: 24
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - humidity
-  - platform: time_date
-    display_options:
-      - 'time'
-      - 'date'
-  - platform: darksky
-    api_key: !secret darksky_api_key
-    forecast:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-    monitored_conditions:
-      - icon
-      - summary
-      - nearest_storm_distance
-      - nearest_storm_bearing
-      - humidity
-      - temperature
-      - temperature_high
-      - temperature_low
-      - apparent_temperature
-      - apparent_temperature_high
-      - apparent_temperature_low
-      - wind_speed
-      - wind_bearing
-      - precip_type
-      - precip_probability
-      - precip_accumulation
-      - precip_intensity
-      - precip_intensity_max
-      - uv_index
-      - daily_summary
-      - pressure
-      - visibility
-    scan_interval:
-      minutes: 5
-
+sensor: !include sensor.yml
 
 # Cloud
 cloud:
@@ -130,11 +86,11 @@ lovelace:
   mode: yaml
   
 media_player:
-  - platform: plex
   
 # Camera
 camera:
   - platform: generic
     still_image_url: !secret radar_url
     name: Radar TX AUS
+    
         

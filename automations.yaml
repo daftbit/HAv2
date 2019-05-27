@@ -53,6 +53,7 @@
     
 # Front end themes automation
 - alias: 'Set HA theme for day and night'
+  initial_state: on
   trigger:
     - platform: homeassistant
       event: start
