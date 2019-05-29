@@ -58,7 +58,7 @@ map:
 sun:
 
 # Sensors
-sensor: !include sensor.yml
+sensor: !include sensor.yaml
 
 # Cloud
 cloud:
@@ -95,6 +95,4 @@ camera:
     
 
 # Google Assistant
-google_assistant:
-  project_id: !secret google_assistant_project_id
-  api_key: !secret google_assistant_api_key
+google_assistant: !include google_assistant_conf.yaml
