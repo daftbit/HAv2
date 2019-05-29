@@ -25,8 +25,8 @@ config:
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
   base_url: !secret hass_base_url
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
   ip_ban_enabled: true
   login_attempts_threshold: 3
 
@@ -58,7 +58,7 @@ map:
 sun:
 
 # Sensors
-sensor: !include sensor.yml
+sensor: !include sensor.yaml
 
 # Cloud
 cloud:
@@ -86,11 +86,13 @@ lovelace:
   mode: yaml
   
 media_player:
-  
+ - platform: plex
 # Camera
 camera:
   - platform: generic
     still_image_url: !secret radar_url
     name: Radar TX AUS
     
-        
+
+# Google Assistant
+google_assistant: !include google_assistant_conf.yaml

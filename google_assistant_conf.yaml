@@ -1,0 +1,36 @@
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  expose_by_default: false
+  entity_config:
+    fan.ge_14287_fan_control_switch_level:
+      expose: true
+      name: Living Room Fan Speed Control
+      room: Living Room
+    light.ge_14294_inwall_smart_dimmer_level:
+      expose: true
+      name: Living Room Fan Light
+      room: Living Room
+    fan.ge_14287_fan_control_switch_level_2:
+      expose: true
+      name: Bedroom Fan Speed Control
+      room: Bedroom
+    light.ge_14294_inwall_smart_dimmer_level_2:
+      expose: true
+      name: Bedroom Fan Light
+      room: Bedroom
+    light.ge_14294_inwall_smart_dimmer_level_3:
+      expose: true
+      name: Dining Room Lights
+      room: Dining Room
+    light.ge_14294_inwall_smart_dimmer_level_4:
+      expose: true
+      name: Kitchen Lights
+      room: Kitchen
+    switch.ge_14291_inwall_smart_switch_switch:
+      expose: true
+      name: Front Exterior Lights
+      room: Exterior
+    switch.ge_14291_inwall_smart_switch_switch_2:
+      expose: true
+      name: Front Hallway Light
+      room: Hallway
