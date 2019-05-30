@@ -6,6 +6,8 @@ resources:
     type: module
   - url: /local/custom_ui/compact-custom-header.js
     type: module
+  - url: /local/custom_ui/mini-media-player-bundle.js
+    type: module
     
 title: Hull Home
 badges: none
@@ -36,6 +38,22 @@ views:
           - sensor.time
           - sensor.date
           - sun.sun
+          - sensor.plex
+ 
+      - type: custom:mini-media-player
+        entity: media_player.galaxy_tab_a_8_0
+        icon: mdi:tablet-android
+        artwork: cover
+        hide:
+          volume: true
+          power_state: false
+      - type: custom:mini-media-player
+        entity: media_player.galaxy_s6
+        icon: mdi:cellphone-android
+        artwork: cover
+        hide:
+          volume: true
+          power_state: false
   - icon: mdi:earth
     id: Environment
     title: Environment
