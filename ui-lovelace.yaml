@@ -39,10 +39,30 @@ views:
           - sensor.date
           - sun.sun
           - sensor.plex
- 
+      - type: custom:mini-media-player
+        entity: media_player.plex_tv_un55nu6950
+        icon: mdi:television
+        name: Living Room TV
+        artwork: cover
+        hide:
+          power: true
+          power_state: true
+          volume: true
+          controls: true
+      - type: custom:mini-media-player
+        entity: media_player.bedroom_tv
+        icon: mdi:television
+        name: Bedroom TV
+        artwork: cover
+        hide:
+          power: true
+          power_state: true
+          volume: true
+          controls: true
       - type: custom:mini-media-player
         entity: media_player.galaxy_tab_a_8_0
         icon: mdi:tablet-android
+        name: Galaxy Tablet
         artwork: cover
         hide:
           volume: true
@@ -50,6 +70,15 @@ views:
       - type: custom:mini-media-player
         entity: media_player.galaxy_s6
         icon: mdi:cellphone-android
+        name: C Phone
+        artwork: cover
+        hide:
+          volume: true
+          power_state: false
+      - type: custom:mini-media-player
+        entity: media_player.galaxy_s7
+        icon: mdi:cellphone-android
+        name: D Phone
         artwork: cover
         hide:
           volume: true
@@ -130,8 +159,6 @@ views:
         entities:
           - entity: light.ge_14294_inwall_smart_dimmer_level_2
           - entity: fan.ge_14287_fan_control_switch_level_2
-          - type: divider
-          - entity: media_player.bedroom_tv
       - type: entities
         title: Kitchen & Dining Room
         show_header_toggle: false
