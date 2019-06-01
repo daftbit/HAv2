@@ -27,6 +27,8 @@ views:
         title: Automations
         show_header_toggle: false
         entities:
+          - automation.master_light_switch_all_lights_on
+          - automation.master_light_switch_all_lights_off
           - automation.turn_the_front_exterior_lights_on
           - automation.turn_the_front_exterior_lights_off
           - automation.turn_the_front_hallway_light_on
@@ -38,6 +40,7 @@ views:
           - sensor.time
           - sensor.date
           - sun.sun
+          - sensor.local_crime
           - sensor.plex
       - type: custom:mini-media-player
         entity: media_player.plex_tv_un55nu6950
