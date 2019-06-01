@@ -6,6 +6,8 @@ resources:
     type: module
   - url: /local/custom_ui/compact-custom-header.js
     type: module
+  - url: /local/custom_ui/mini-media-player-bundle.js
+    type: module
     
 title: Hull Home
 badges: none
@@ -25,6 +27,8 @@ views:
         title: Automations
         show_header_toggle: false
         entities:
+          - automation.master_light_switch_all_lights_on
+          - automation.master_light_switch_all_lights_off
           - automation.turn_the_front_exterior_lights_on
           - automation.turn_the_front_exterior_lights_off
           - automation.turn_the_front_hallway_light_on
@@ -36,6 +40,52 @@ views:
           - sensor.time
           - sensor.date
           - sun.sun
+          - sensor.local_crime
+          - sensor.plex
+      - type: custom:mini-media-player
+        entity: media_player.plex_tv_un55nu6950
+        icon: mdi:television
+        name: Living Room TV
+        artwork: cover
+        hide:
+          power: true
+          power_state: true
+          volume: true
+          controls: true
+      - type: custom:mini-media-player
+        entity: media_player.bedroom_tv
+        icon: mdi:television
+        name: Bedroom TV
+        artwork: cover
+        hide:
+          power: true
+          power_state: true
+          volume: true
+          controls: true
+      - type: custom:mini-media-player
+        entity: media_player.galaxy_tab_a_8_0
+        icon: mdi:tablet-android
+        name: Galaxy Tablet
+        artwork: cover
+        hide:
+          volume: true
+          power_state: false
+      - type: custom:mini-media-player
+        entity: media_player.galaxy_s6
+        icon: mdi:cellphone-android
+        name: C Phone
+        artwork: cover
+        hide:
+          volume: true
+          power_state: false
+      - type: custom:mini-media-player
+        entity: media_player.galaxy_s7
+        icon: mdi:cellphone-android
+        name: D Phone
+        artwork: cover
+        hide:
+          volume: true
+          power_state: false
   - icon: mdi:earth
     id: Environment
     title: Environment
@@ -112,8 +162,6 @@ views:
         entities:
           - entity: light.ge_14294_inwall_smart_dimmer_level_2
           - entity: fan.ge_14287_fan_control_switch_level_2
-          - type: divider
-          - entity: media_player.bedroom_tv
       - type: entities
         title: Kitchen & Dining Room
         show_header_toggle: false

@@ -45,3 +45,17 @@
     - visibility
   scan_interval:
     minutes: 5
+    
+# Plex
+- platform: plex
+  host: !secret plex_sensor_host
+  port: !secret plex_sensor_port
+  token: !secret plex_sensor_token
+  
+# Crime Reports - 5 mile radius
+- platform: crimereports
+  name: Local Crime
+  radius: 1609.34
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  

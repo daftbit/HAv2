@@ -72,6 +72,45 @@
           {% else %}
             Dark - Blue
           {% endif %}
+
+
+- alias: 'Master Light Switch All Lights On'
+  trigger:
+    - platform: event
+      event_type: zwave.node_event
+      event_data:
+        entity_id: zwave.jasco_products_14294_in_wall_smart_dimmer_2
+        basic_level: 255
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.ge_14291_inwall_smart_switch_switch_2
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.ge_14294_inwall_smart_dimmer_level
+          - light.ge_14294_inwall_smart_dimmer_level_3
+          - light.ge_14294_inwall_smart_dimmer_level_4
+        brightness_pct: 100
+        
+- alias: 'Master Light Switch All Lights Off'
+  trigger:
+    - platform: event
+      event_type: zwave.node_event
+      event_data:
+        entity_id: zwave.jasco_products_14294_in_wall_smart_dimmer_2
+        basic_level: 0
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ge_14291_inwall_smart_switch_switch_2
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.ge_14294_inwall_smart_dimmer_level
+          - light.ge_14294_inwall_smart_dimmer_level_3
+          - light.ge_14294_inwall_smart_dimmer_level_4
+        
           
           
     
