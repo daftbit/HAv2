@@ -6,21 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.3]
+## [0.0.3] - 2019-05-29
 ### Added
 - Plex integration
 - Custom mini media player card [Project](https://github.com/kalkih/mini-media-player) [Latest Version](https://github.com/kalkih/mini-media-player/releases/tag/v1.1.3)
+- Crime reports integration
+- Master light automations
  
 
 ### Changed
-- ui-lovelace.yaml for addition of custom card and plex sensor
+- ui-lovelace.yaml for addition of custom card, plex sensor, crime reports sensor, and master light automations
 - configuration.yaml to support integration
 - sensor.yaml to support sensor integration
 
 ### Removed
 - removed sensor.yml and renamed to sensors.yaml
 
-## [0.0.2]
+## [0.0.2] - 2019-05-27
 ### Added
 - Google Assistant integration
 
